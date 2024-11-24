@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج الدفع</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container my-4">
+    <h2>نموذج الدفع</h2>
+    <form id="paymentForm">
+        <div class="form-group">
+            <label for="customer-name">الاسم:</label>
+            <input type="text" class="form-control" id="customer-name" name="customer-name" required>
+        </div>
+        
+        <h3>المنتجات</h3>
+        
+        <!-- قائمة المنتجات -->
+        <div id="product-list">
+            <div class="product-item">
+                <h5>شمعدان</h5>
+                <p>السعر: <span class="product-price">500</span> جنيه</p>
+                <label for="quantity-1">الكمية:</label>
+                <input type="number" class="form-control quantity" id="quantity-1" name="quantity-1" min="0" value="0">
+            </div>
+            <div class="product-item">
+                <h5>قدر فخاري</h5>
+                <p>السعر: <span class="product-price">150</span> جنيه</p>
+                <label for="quantity-2">الكمية:</label>
+                <input type="number" class="form-control quantity" id="quantity-2" name="quantity-2" min="0" value="0">
+            </div>
+            <div class="product-item">
+                <h5>ابريق خزفي مزخرف</h5>
+                <p>السعر: <span class="product-price">390</span> جنيه</p>
+                <label for="quantity-3">الكمية:</label>
+                <input type="number" class="form-control quantity" id="quantity-3" name="quantity-3" min="0" value="0">
+            </div>
+            <!-- يمكنك إضافة المزيد من المنتجات هنا -->
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">إتمام الدفع</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('paymentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        let totalAmount = 0;
+        const products = document.querySelectorAll('.product-item');
+
+        products.forEach((product, index) => {
+            const quantity = document.getElementById(`quantity-${index + 1}`).value;
+            const price = parseFloat(product.querySelector('.product-price').innerText);
+
+            totalAmount += price * quantity;
+        });
+
+        if (totalAmount > 0) {
+            alert(`تم إتمام الدفع بنجاح! المبلغ الإجمالي: ${totalAmount} جنيه.`);
+            this.reset(); // إعادة تعيين النموذج
+        } else {
+            alert('يرجى إدخال كمية للمنتجات!');
+        }
+    });
+</script>
+
+</body>
+</html>

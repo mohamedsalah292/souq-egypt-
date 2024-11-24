@@ -1,0 +1,947 @@
+
+/*---------------------------------- start   Golobal       rules ------------------------- */
+
+ * ,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+} 
+
+:root {
+    --default-background-color-light: #fff;
+    --default-text-color-light: #fff;
+    --main-section-background:#f0cb29;
+    --background-color-dark:#121212;
+    --text-color-dark: #ffffff;
+}
+
+
+
+/*--------------------------------------- End Golobalrules ------------------------------------ */
+
+
+
+body {
+    background-color: var(--default-background-color-light);
+    color: var(--default-text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+
+ /* --------------------------------End global-------------------------- *
+
+
+
+
+
+/* -------------------------------------------strat up navbar-------------------------------------------- */
+
+/* .main-cart {
+  background-color: red;
+
+} */
+
+.main-cart .scoial-icon {
+  display: flex;
+  font-size:20px;
+  
+}
+.main-cart .scoial-icon .cart-shoping{
+  padding-left:30px ;
+  color: #000;
+transition: 0.3s;
+padding-right: 10px;
+}
+.main-cart .scoial-icon .cart-shoping:hover{
+  color:rgb(130, 129, 129);
+
+}
+.main-cart .scoial-icon .cart-wish{
+  font-size:20px ;
+  padding-left:30px ;
+  color: #000;
+  transition: 0.3s;
+}
+
+.main-cart .scoial-icon .cart-wish:hover{
+  color: rgb(216, 220, 218);
+}
+.main-cart .scoial-icon .login a{
+  color: #000;
+  transition: 0.3s;
+}
+.main-cart .scoial-icon .login a:hover{
+  color: rgb(216, 220, 218);
+}
+
+/* ----------------------------------------End navbar------------------------------------------------ */
+
+
+
+
+
+
+
+
+/* ---------------------------------- start header----------------------------------- */
+
+.header .main-header {
+  width: 70%;
+  margin: auto ;
+}
+
+.header .main-header .lists ul{
+  display: flex;
+  justify-content: space-around;
+  padding: 7px;
+} 
+
+.header .main-header .lists ul li{
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+} 
+
+.header .main-header .lists ul li:hover{
+  background-color: rgb(216, 220, 218);
+} 
+.header .main-header .lists ul li a{
+  list-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  
+} 
+/* --------------------------------------------- End header------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/*  --------------------------------------------------------------start sponser static---------------------------------------------------- */
+
+/*for Demo Only*/
+.demo-row {
+  padding: 50px 0;
+}
+
+/*Implement*/
+.sponsor-feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+#id-sponsors .carousel {
+    margin-bottom: 20px;
+}
+#id-sponsors .item {
+    padding-bottom: 20px;
+}
+#id-sponsors .carousel-indicators {
+    bottom: -25px;
+}
+
+/*  --------------------------------------------------------------end sponser static---------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------start swiper------------------------------------------------ */
+
+.al-safe {
+  position: relative;
+  overflow: hidden;
+}
+
+.al-safe-category {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.al-safe-container {
+  display: flex;
+  justify-content: center;
+  /* overflow-x: auto; */
+  scroll-behavior: smooth;
+  /* background-color: var(--main-section-background); */
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes move {
+  0%, 100% { transform: translateX(-10vw); } /* Start on the left */
+  50% { transform: translate(10vw); }       /* Move to the right */
+}
+
+.al-safe-container::-webkit-scrollbar {
+  display:none;
+}
+
+.al-safe-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 300px;
+  margin-right: 40px;
+  margin-top: 60px;
+  animation: spin 2s linear infinite, move 11s ease-in-out infinite;
+}
+
+.al-safe-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.al-safe-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-tag {
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  color: #000000;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+
+.card-btn {
+  /* bottom: 10px; */
+  border: none;
+  padding: 6px;
+  text-transform: capitalize;
+  /* background: var(--background-nav-btn); */
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.al-saf-card:hover .card-btn {
+  opacity: 1;
+}
+
+.card-btn:hover {
+  background: var(--background-nav-btn-Hover);
+  color: #fff;
+}
+
+.al-safe-info {
+  width: 100%;
+  height: 100px;
+  padding-top: 20px;
+}
+
+.al-safe-info h5{
+  color: gray;
+}
+
+.al-safe-brand {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--default-text-color-light);
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--default-text-color-light);
+}
+
+.actual-price {
+  /* margin-left: 10px; */
+  text-decoration: line-through;
+  right: 10px;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  /* position: absolute; */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+
+.current-price {
+  font-size: 1.2em;
+}
+
+.old-price {
+  font-size: 1em;
+}
+/* -------------------------------------end swiper------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------- Start Gifts ------------------------------*/
+
+.card {
+  border: none;
+  margin-bottom: 30px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-right: 15px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.price-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.old-price {
+text-decoration: line-through;
+color: gray;
+margin-left: 15px; /* تعديل المسافة بين السعر القديم والجديد */
+}
+
+
+.price-container .price {
+  color: black;
+  font-weight: 150;
+  
+}
+
+.old-price {
+text-decoration: line-through;
+color: gray;
+margin-left: 15px; /* تعديل المسافة بين السعر القديم والجديد */
+}
+
+.btn-add {
+background-color: #f7e7e1;
+color: #2e2e2e;
+border: none;
+font-weight: bold;
+padding: 5px 15px; /* تصغير حجم الزر */
+font-size: 0.9rem; /* تصغير حجم النص داخل الزر */
+}
+
+.btn-add:hover {
+background-color: #ffcc99;
+}
+
+/*---------------------------------- End gifts --------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------start swiper------------------------------------------------ */
+
+.al-saf {
+  position: relative;
+  overflow: hidden;
+}
+
+.al-saf-category {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.al-saf-container {
+  display: flex;
+  justify-content: center;
+  /* overflow-x: auto; */
+  scroll-behavior: smooth;
+  /* background-color: var(--main-section-background); */
+  
+}
+
+
+.al-saf-container::-webkit-scrollbar {
+  display:none;
+}
+
+.al-saf-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 300px;
+  margin-right: 40px;
+  margin-top: 60px;
+
+}
+
+.al-saf-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.al-saf-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-tag {
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  color: #000000;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+
+.card-btn {
+  /* bottom: 10px; */
+  border: none;
+  padding: 6px;
+  text-transform: capitalize;
+  /* background: var(--background-nav-btn); */
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.al-saf-card:hover .card-btn {
+  opacity: 1;
+}
+
+.card-btn:hover {
+  background: var(--background-nav-btn-Hover);
+  color: #fff;
+}
+
+.al-saf-info {
+  width: 100%;
+  height: 100px;
+  padding-top: 20px;
+}
+
+.al-saf-info h5{
+  color: gray;
+}
+
+.al-saf-brand {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--default-text-color-light);
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--default-text-color-light);
+}
+
+.actual-price {
+  /* margin-left: 10px; */
+  text-decoration: line-through;
+  right: 10px;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  /* position: absolute; */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+
+.current-price {
+  font-size: 1.2em;
+}
+
+.old-price {
+  font-size: 1em;
+}
+/* -------------------------------------end swiper------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+/*---------------------------------- Start Pottery Section --------------------*/
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 40px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-body h4 {
+  font-size: 1.rem;
+  color: #ff5722;
+}
+
+.card-body del {
+  color:gray;
+  margin-left: 10px;
+  text-decoration: line-through; /* لجعل النص مشطوبًا */
+
+}
+.card-body h5{
+color: green;
+font-size: 19px;
+}
+
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.btn {
+  padding: 10px 60px;
+  font-size: 0.8rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+h2#السعف{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.btn-primary:hover {
+  background-color: blue;
+}
+
+.current-price {
+  font-size: 1.2em;
+}
+
+.old-price {
+  font-size: 1em;
+}
+
+.card-body .d-grid {
+  margin-top: 10px;
+}
+
+
+/*---------------------------------- end Pottery Section --------------------*/
+
+
+
+
+/* ----------------------------- start btn Deatails----------------------------------- */
+
+.card-details {
+  margin-top: 40px;
+  color: #000;
+}
+
+
+.card-details .title-details {
+  text-align: center;
+  margin: 40px;
+}
+
+
+.card-details .container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+
+}
+
+.card-details .container .content .sceond{
+  padding-block: 15px;
+  font-size: 20px;
+}
+
+.card-details .container .content .lists {
+  padding-block: 4px;
+}
+
+.card-details .container .main-head {
+  margin-block: 20px;
+}
+
+.card-details .container .card-image {
+  width: 300px;
+}
+
+
+.card-details .container .card-image img {
+    width: 100%;
+    display: block;
+}
+
+/* ----------------------------- end btn Deatails----------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------- start who we are -------------------------------*/
+
+
+
+@media screen and (max-width: 576) {
+.contact-sction {
+    flex-direction: row;
+}
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+.contact-sction {
+    flex-direction: row;
+}
+
+}
+
+
+
+
+
+
+
+/*---------------------------------- end who we are -----------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- start footer --------------- */
+footer {
+background-color: #2d2d2d;
+color: white;
+padding: 20px 0;
+text-align: center;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 90px; /* المسافة بين العناصر */
+}
+
+
+.footer-map {
+flex: 1;
+padding: 20px;
+margin-bottom: 15px;
+height: 200px; /* حجم الخريطة */
+}
+
+.footer-center {
+flex: 1;
+text-align: center;
+}
+
+.footer-center ul {
+list-style-type: none;
+padding: 0;
+display: flex;
+justify-content: center;
+}
+
+.footer-center ul li {
+margin: 0 10px;
+}
+
+.footer-center ul li a {
+color: white;
+font-size: 24px;
+text-decoration: none;
+}
+
+
+
+
+.payment .icon-pay {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  font-size: 24px;
+}
+
+
+
+
+
+.footer-right {
+flex: 1;
+text-align: right;
+}
+
+.footer-right ul {
+list-style-type: none;
+padding: 0;
+}
+
+.footer-right ul li {
+margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+color: white;
+text-decoration: none;
+font-size: 20px;
+}
+
+.footer-bottom {
+text-align: center;
+padding: 10px 0;
+background-color: #1b1b1b;
+margin-top: 20px;
+}
+
+
+
+
+/* -------------------------------------------- end footer --------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------- End Pottery Section ----------------------*/
+
+/* زر الصعود */
+#scrollToTopBtn {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #f00;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+display: none; /* إخفاء الزر في البداية */
+}
+
+#scrollToTopBtn:hover {
+background-color: #c00;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+.al-saf-card {
+    width: 80%; /* جعل البطاقات تأخذ 80% من العرض في الشاشات الصغيرة */
+    margin: 20px auto; /* توسيط البطاقات */
+}
+
+.pre-btn, .nxt-btn {
+    width: 8vw; /* تقليل حجم الأزرار */
+}
+}
+
+
+/*   لتغيير التخطيط على الشاشات الأصغر */
+@media (max-width: 1024px) {
+.al-saf-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 أعمدة على الشاشات المتوسطة */
+}
+}
+
+@media (max-width: 768px) {
+.al-saf-container {
+    grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
+}
+}
